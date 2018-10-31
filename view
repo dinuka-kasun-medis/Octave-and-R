@@ -1,0 +1,88 @@
+<?php 
+mysql_connect('localhost','root','');
+mysql_select_db('registration');
+
+
+$sql="SELECT * FROM users";
+
+$records=mysql_query($sql);
+
+
+?>
+
+<html>
+<head>
+
+</head>
+<body>
+<div class="container">
+<table width="auto" border="1" cellpadding="1">
+<?php 
+while($user=mysql_fetch_assoc($records)){
+	echo "<tr>";
+	echo "<th>";
+	echo "User Id";
+	echo "</th>"
+	echo "<th>";
+	echo "User First Name";
+	echo "</th>"
+	echo "<th>";
+	echo "User Last Name";
+	echo "</th>"
+	echo "<th>";
+	echo "User Screen Name";
+	echo "</th>"
+	echo "<th>";
+	echo "User Date Of Birth";
+	echo "</th>"
+	echo "<th>";
+	echo "User Gender";
+	echo "</th>"
+	echo "<th>";
+	echo "User Country";
+	echo "</th>"
+	echo "<th>";
+	echo "User Email";
+	echo "</th>"
+	
+	echo "<tr>";
+	echo "<td>".$user[id]."</td>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td>".$user[f_name]."</td>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td>".$user[l_name]."</td>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td>".$user[sc_name]."</td>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td>".$user[DOB]."</td>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td>".$user[gender]."</td>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td>".$user[country]."</td>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td>".$user[email]."</td>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td>".$user[phone]."</td>";
+	echo "</tr>";
+	echo "</tr>";
+	
+	
+}
+
+?>
+
+</table>
+</div>
+
+</body>
+
+
+</html>
