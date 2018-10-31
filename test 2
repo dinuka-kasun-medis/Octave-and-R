@@ -1,0 +1,7 @@
+
+	<body>
+		Name: <?php echo $_POST["name"];?><br/>
+		NIC No: <?php echo $_POST["nic"];?><br/>
+		Telephone No: <?php echo $_POST["tp"];?><br/>
+		Address: <?php echo $_POST["add"];?><br/>
+	</body>
